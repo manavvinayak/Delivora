@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+ .logo {
+      padding-left: 10px;
+      width: 100px;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-weight: bold;
+}
+
+.nav-items{   
+    padding: 0 10px 0;
+    width: auto;
+}
+
+.nav-items > ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items > ul > li{
+    padding: 40px 10px 0 0;
+    font-size: large;
+    cursor: pointer;
+}
+
+.card {
+    width: 280px;
+    height: 310px;
+    padding: 10px;
+    margin: 0px 16px;
+    cursor: pointer;
+    
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit:cover;
+}
+
+.restaurent-lists {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
