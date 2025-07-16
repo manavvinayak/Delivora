@@ -1,4 +1,6 @@
 import React from "react";
+import { RestaurentLists} from '../Data/restaurentInfo.js'
+
 
 const Title = () => (
    <a href="/">
@@ -8,58 +10,25 @@ const Title = () => (
 )
   
 
-const Header = () => {
-  return (
-    <div className="Header">
-      <Title/>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>Offer</li>
-          <li>About Us </li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
 
-const CardsInfo = [
-  {
-  name: "Ghar Cravings",
-  image: " https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/4/23/24fe520c-82ae-42b9-9454-d57df1d7df2b_03e11229-1dc1-4c4a-af89-3d62f57d9ef4.jpeg",
-  cuisines: ["North Indian, Home Food"],
-  place: " Rajendra Place",
-  rating: "4.3"
-},
-  {
-  name: "Ghar Cravings",
-  image: " https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/4/23/24fe520c-82ae-42b9-9454-d57df1d7df2b_03e11229-1dc1-4c4a-af89-3d62f57d9ef4.jpeg",
-  cuisines: ["North Indian, Home Food"],
-  place: " Rajendra Place",
-  rating: "4.3"
-},
-  {
-  name: "Ghar Cravings",
-  image: " https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/4/23/24fe520c-82ae-42b9-9454-d57df1d7df2b_03e11229-1dc1-4c4a-af89-3d62f57d9ef4.jpeg",
-  cuisines: ["North Indian, Home Food"],
-  place: " Rajendra Place",
-  rating: "4.3"
-},
 
-]
-
-const RestaurentCards = () => {
+const RestaurentCards = ({restaurent}) => {
+  const {name,city,cuisines,cloudinaryImageId,area} = restaurent.data;
   return (
      <div className="card">
-        <img src={Ghar.image}/>
-        <h2>{Ghar.name}</h2>
-        <h4> {Ghar.rating} </h4>
-        <h3> {Ghar.cuisines.join(",")}</h3>
-        <h4> {Ghar.place} </h4>
+         <img src={cloudinaryImageId}/>
+         
+        <h2>{name}</h2>
+        <h2>{city}</h2>
+        <h2>{cuisines}</h2>
+        <h2>{area}</h2>
+        {/* <h4> {Ghar.rating} </h4> */}
+        {/* <h3> {Ghar.cuisines.join(",")}</h3>
+        <h4> {Ghar.place} </h4> */}
+       
      </div>
-  )
-}
+  );
+};
 
 const Footer = () => {
   return (
@@ -69,17 +38,13 @@ const Footer = () => {
 function App() {
   return (
     <>
-    <Header/>
+    <Title/>
     <div className="restaurent-lists">
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
-    <RestaurentCards/>
+    <RestaurentCards restaurent={RestaurentLists[0]}/>
+    <RestaurentCards restaurent={RestaurentLists[1]}/>
+    <RestaurentCards restaurent={RestaurentLists[2]}/>
+    <RestaurentCards restaurent={RestaurentLists[3]}/>
+   
     
     </div>
     <Footer/>
