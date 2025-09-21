@@ -369,7 +369,7 @@ export const RestaurentLists = [
       city: "21",
       area: "Nanpura",
       totalRatingsString: "100+ ratings",
-      cloudinaryImageId: "spd3y5gok3vvwqulgmda",
+      cloudinaryImageId: "https://images.unsplash.com/photo-1743517894265-c86ab035adef?q=80&w=1082&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisines: ["Ice Cream", "Juices", "Desserts", "Beverages"],
       tags: [],
       costForTwo: 20000,
